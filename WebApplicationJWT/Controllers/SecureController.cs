@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 [Route("api/secure")]
 [ApiController]
-[Authorize] // 🔐 Requires JWT Authentication
+[Authorize] //  Requires JWT Authentication
 public class SecureController : ControllerBase
 {
     [HttpGet]
@@ -13,7 +13,7 @@ public class SecureController : ControllerBase
     }
 
     [HttpGet("admin")]
-    [Authorize(Roles = "Admin")] // 🔐 Only Admins can access this
+    [Authorize(Roles = "Admin")] //  Only Admins can access this
     public IActionResult AdminOnly()
     {
         return Ok(new { message = "Hello, Admin!" });

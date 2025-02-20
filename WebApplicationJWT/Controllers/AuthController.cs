@@ -17,7 +17,7 @@ namespace WebApplicationJWT.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginModel model)
         {
-            if (model.Username == "admin" && model.Password == "password")
+            if (model.Username == "manish" && model.Password == "manish123")
             {
                 var token = _jwtTokenService.GenerateToken(model.Username, "Admin");
 
